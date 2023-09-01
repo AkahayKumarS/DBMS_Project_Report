@@ -5,6 +5,7 @@
 \setcounter{tocdepth}{6} 
 \setcounter{secnumdepth}{6} 
 \setcounter{chapter}{0}
+\usepackage{setspace}
 \usepackage{blindtext}
 \usepackage{layout}
 \usepackage[dvipsnames]{xcolor}
@@ -170,14 +171,13 @@ NAME OF THE EXAMINER  \hspace{4 cm}  SIGNATURE \\\\ 1.\\\\2.}}
 
 \justifying{
 \addcontentsline{toc}{chapter}{\numberline{}Abstract}
-Para I	(60 words approx) 	Shall introduce the reader the subject matter of the project work / dissertation. \\
-\\
-Para II	(100 words approx) 	Shall discuss in brief the developments in the area of work/research so far based on the reference to the literature. Identification of the problem and defining exactly the purpose of the intended work or proposition of the novel solution. \\
-\\
-Para III	(60 words approx)	Conclusions drawn based on the work. Finally, write the proposition of the scope for future work. \\
-\\
-Overall 300 Words Approximately (Not More than one  pages) 
-}
+\begin{spacing}{1.5}
+The Tailor's Database System is a transformative cornerstone within the realm of modern tailoring. This dynamic tool combines precision and artistry, empowering tailors to create exquisite clothing while efficiently managing their operations. It acts as a central hub for storing and accessing critical information, including customer measurements, fabric preferences, and order details. By providing a streamlined approach to managing intricate tailoring processes, this system ensures that every stitch and seam aligns with the highest standards of craftsmanship. Moreover, it enables tailors to enhance customer experiences by offering personalized services, resulting in satisfied clients who return for more and recommend the tailor's services to others.
+
+One of the key functions of the Tailor's Database System is inventory management. It allows tailors to keep a meticulous record of fabrics, threads, and accessories, ensuring that they always have the necessary materials at hand for fulfilling orders. This not only prevents issues like overstocking or understocking but also minimizes waste and optimizes resource allocation. The system's real-time tracking capabilities enable tailors to know precisely what's available in their inventory, facilitating quicker decision-making when selecting materials for custom garments.
+
+Furthermore, the system's analytics and reporting capabilities offer data-driven insights that empower tailors to make informed business decisions. They can analyze sales trends, identify popular designs, and forecast demand, thereby staying ahead in the competitive fashion industry. Overall, the Tailor's Database System is not merely a technological tool; it's a strategic asset that elevates tailoring businesses, blending the art of tailoring with the efficiency of modern technology to create exceptional, customized fashion experiences.
+\end{spacing}
 %/\thispagestyle{empty}
 
 
@@ -194,23 +194,27 @@ Overall 300 Words Approximately (Not More than one  pages)
 \newpage
 %/\tableofcontents
 \thispagestyle{empty}
-
 \chapter{Introduction}
+\begin{spacing}{1.5}
 An efficient and well-organized Tailor's Database Management System (DBMS) is the cornerstone of success for modern tailoring businesses. In an industry where precision, customization, and customer satisfaction are paramount, a tailor's DBMS serves as the digital backbone that enables tailors to seamlessly manage their operations, clientele, inventory, and much more.
 
-In this digital age, where precision meets artistry, the Tailor's DBMS is not merely a tool; it's a strategic asset that enables tailors to create exquisite clothing, build enduring customer relationships, and navigate the intricate threads of the fashion industry with precision and finesse. In this introduction, we will delve deeper into the multifaceted world of a Tailor's DBMS, exploring its features, benefits, and the transformative impact it has on the art of tailoring.
+ In this introduction, we will delve deeper into the multifaceted world of a Tailor's DBMS, exploring its features, benefits, and the transformative impact it has on the art of tailoring.
+\end{spacing}
 \section{Problem Definition} 
+\begin{spacing}{1.5}
 To create a database that can store client’s data like client name, phone number, address, and all the measurements so that the tailor can use the data in the database without having to measure again and again.
-
+\end{spacing}
 %\subsection{vvv}
 \section{Scope and Importance}
+\begin{spacing}{1.5}
 \begin{itemize}
 \item \textbf{Customer Management}: A tailor's DBMS can store and organize customer information, including measurements, preferences, contact details, and purchase history. This data can be used to offer personalized services and promotions.
 \item \textbf{Order Processing}: The system can streamline the order management process, from taking measurements and fabric selection to tracking the progress of each order. This reduces errors and ensures timely deliveries.
+\pagenumbering{arabic}
 \item \textbf{Data Security}: A DBMS can provide data security features to protect sensitive customer information, ensuring that it's not compromised.
 \item \textbf{Competitive Advantage}: Implementing a modern DBMS can give tailors a competitive edge in the fashion industry by offering better services, faster delivery, and a more personalized customer experience.
 \end{itemize}
-\pagenumbering{arabic}
+\end{spacing}
 \chapter{Software Requirement Specification}
 
 \section{Functional Requirement Specification} 
@@ -245,12 +249,21 @@ Software Requirement Specification
 \chapter{System Design}
 \section{ER Diagram} 
 Figure:\ref{fig:tailor_database.drawio.png} shows the ER diagram of Tailor's Database.
+\\
+\\
+\\
+\\
 \begin{figure}[h]
  \centering
  \includegraphics[width=1\textwidth]{tailor_database.drawio.png}
  \caption{ER diagram}
  \label{fig:tailor_database.drawio.png}
 \end{figure}
+\\
+\\
+\\
+\\
+\\
 \\
 \\
 \\
