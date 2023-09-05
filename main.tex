@@ -12,15 +12,13 @@
 \usepackage{biblatex} %Imports biblatex package
 \addbibresource{sample.bib} %Import the bibliography file
 \usepackage{geometry}
- \geometry{
+\geometry{
  a4paper,
  total={170mm,257mm},
  left=27mm,
  top=20mm,
  right=27mm,
  }
-
-
 \title{DBMS MINIPROJECT REPORT }
 \author{Akshay}
 \date{August 2023}
@@ -206,11 +204,20 @@ To create a database that can store client’s data like client name, phone numb
 \end{spacing}
 %\subsection{vvv}
 \section{Scope and Importance}
+\subsection{Scope:}
 \begin{spacing}{1.5}
 \begin{itemize}
 \item \textbf{Customer Management}: A tailor's DBMS can store and organize customer information, including measurements, preferences, contact details, and purchase history. This data can be used to offer personalized services and promotions.
 \item \textbf{Order Processing}: The system can streamline the order management process, from taking measurements and fabric selection to tracking the progress of each order. This reduces errors and ensures timely deliveries.
 \pagenumbering{arabic}
+\item\textbf{Inventory Control}: Manage fabric and material inventory, ensuring availability and tracking usage for each order.
+\item\textbf{Measurement Records}: Store and update customer measurements accurately, making it easy to retrieve and apply them to new orders.
+\\
+\\
+\subsection{Importance:}
+\item\textbf{Efficiency}: A DBMS streamlines operations by automating routine tasks, reducing manual errors, and improving the overall efficiency of the tailor shop.
+\item\textbf{Customer Service}: The system enables tailors to provide personalized and consistent customer service by storing customer preferences and order histories.
+\item\textbf{Accuracy}: Accurate measurement records and order tracking reduce the likelihood of errors in garment production, ensuring customer satisfaction.
 \item \textbf{Data Security}: A DBMS can provide data security features to protect sensitive customer information, ensuring that it's not compromised.
 \item \textbf{Competitive Advantage}: Implementing a modern DBMS can give tailors a competitive edge in the fashion industry by offering better services, faster delivery, and a more personalized customer experience.
 \end{itemize}
@@ -287,14 +294,24 @@ Figure:\ref{fig:tailor_schema.jpg} shows the Schema Diagram of Tailor's Database
       Attributes &Datatype &Constraints&Description  \\
       \hline
       \hline
-         STUD-ID&INT&PRIMARY KEY&ID of student  \\
+         CLIENT-ID&INT&PRIMARY KEY&ID of client  \\
          \hline
-         STUD-NAME&VARCHAR&NOT NULL& Name of the student\\ 
+         CLIENT-NAME&VARCHAR&NOT NULL& Name of the client\\ 
          \hline
-         Email-id&VARCHAR&NOT NULL& Email of the student\\ 
+         AGE&INT&NOT NULL& Client's age\\ 
+         \hline
+         GENDER&VARCHAR&NOT NULL&Client's gender\\
+         \hline
+         ADDRESS&TEXT&NOT NULL&Client's address\\
+         \hline
+         PH-NO&BIGINT&NOT NULL&Client's phone number\\
+         \hline
+         EMAIL-ID&VARCHAR&NOT NULL&Client's email id\\
+         \hline
+         PASSWORD&VARCHAR&NOT NULL&Client's password\\
          \hline
     \end{tabular}
-    \caption{student details .}
+    \caption{Client details .}
 \label{table:1}
     \end{table}
 \end{center}
@@ -307,47 +324,150 @@ Figure:\ref{fig:tailor_schema.jpg} shows the Schema Diagram of Tailor's Database
       Attributes &Datatype &Constraints&Description  \\
       \hline
       \hline
-         COURSE-ID&INT&PRIMARY KEY&ID of course  \\
+         SHIRT-ID&INT&PRIMARY KEY&ID of shirt  \\
          \hline
-         COURSE-NAME&VARCHAR&NOT NULL& Name of the course\\ 
+         CLIENT-ID&INT&FOREIGN KEY&ID of client\\
          \hline
-         DEPT-ID&VARCHAR&NOT NULL& department id\\ 
+         COLLAR&FLOAT&NOT NULL& Collar size\\ 
+         \hline
+         SLEEVE&FLOAT&NOT NULL& Length of the sleeve\\ 
+         \hline
+         CHEST&FLOAT&NOT NULL& Chest's measurement\\
+         \hline
+         NECK&FLOAT&NOT NULL&Neck to shoulder size\\
+         \hline
+         SHOULDER&FLOAT&NOT NULL&Shoulder to shoulder length\\
          \hline
     \end{tabular}
-    \caption{course table .}
-\label{table:1}
+    \caption{Shirt Table.}
+\label{table:2}
     \end{table}
 \end{center}
+
+\begin{center}
+\begin{table}[h!]
+\centering
+    \begin{tabular}{|c|c|c|c|}
+    \hline
+      Attributes &Datatype &Constraints&Description  \\
+      \hline
+      \hline
+         PANT-ID&INT&PRIMARY KEY&ID of pant  \\
+         \hline
+         CLIENT-ID&INT&FOREIGN KEY&ID of client\\
+         \hline
+         WAIST&FLOAT&NOT NULL& Waist size\\ 
+         \hline
+         THIGH&FLOAT&NOT NULL& Thigh length\\ 
+         \hline
+         LENGTH&FLOAT&NOT NULL& Length of the pant\\
+         \hline
+         KNEE&FLOAT&NOT NULL&Knee size\\
+         \hline
+         LEG-OPENING&FLOAT&NOT NULL&Width of the cuff\\
+         \hline
+    \end{tabular}
+    \caption{Pant Table.}
+\label{table:3}
+    \end{table}
+\end{center}
+
+\begin{center}
+\begin{table}[h!]
+\centering
+    \begin{tabular}{|c|c|c|c|}
+    \hline
+      Attributes &Datatype &Constraints&Description  \\
+      \hline
+      \hline
+         ORDER-ID&INT&PRIMARY KEY&ID of order \\
+         \hline
+         CLIENT-ID&INT&FOREIGN KEY&ID of client\\
+         \hline
+         SHIRT-TYPE&VARCHAR&NULL& Type of shirt\\ 
+         \hline
+         PANT-TYPE&VARCHAR&NULL& Type of pant\\ 
+         \hline
+         ORDER-DATE&DATE&NULL& Date of order\\
+         \hline
+         DELIVERY-DATE&DATE&NULL&Date of delivery\\
+         \hline
+         ORDER-TOTAL&DECIMAL&NULL&Total order amount\\
+         \hline
+    \end{tabular}
+    \caption{Orders Table.}
+\label{table:4}
+    \end{table}
+\end{center}
+
 \chapter{Screenshots}
 
-Figure:\ref{fig:home page.png} shows the screenshot of home page 
+Figure:\ref{fig:HomePage.jpeg} shows the screenshot of home page 
 \begin{figure}[h]
  \centering
- \includegraphics[width=0.75\textwidth]{home page.png}
+ \includegraphics[width=0.75\textwidth]{HomePage.jpeg}
  \caption{Home Page}
- \label{fig:home page.png}
+ \label{fig:HomePage.jpeg}
 \end{figure}
-
-Figure:\ref{fig:SIGNIN.png} shows the screenshot of Sign in  page 
+\\
+\\
+\\
+Figure:\ref{fig:signup.jpeg} shows the screenshot of sign up page
 \begin{figure}[h]
  \centering
- \includegraphics[width=0.75\textwidth]{SIGNIN.png}
- \caption{User Signin Page}
- \label{fig:SIGNIN.png}
+\includegraphics[width=0.75\textwidth,height=0.5\textwidth]{signup.jpeg}
+ \caption{Sign Up Page}
+ \label{fig:signup.jpeg}
 \end{figure}
-\\All the pages and database screen shots need to be added .
+\\
+\\
+Figure:\ref{fig:PersonalDetails.jpeg} shows the screenshot of personal details page
+\begin{figure}[h]
+ \centering
+ \includegraphics[width=0.75\textwidth]{PersonalDetails.jpeg}
+ \caption{Personal Details Page}
+ \label{fig:PersonalDetails.jpeg}
+\end{figure}
+\\
+\\
+Figure:\ref{fig:Measurements.jpeg} shows the screenshot of measurement details page
+\begin{figure}[h]
+ \centering
+ \includegraphics[width=0.75\textwidth]{Measurements.jpeg}
+ \caption{Measurement Details Page}
+ \label{fig:Measurements.jpeg}
+\end{figure}
+\\
+\\
+Figure:\ref{fig:Shirt_and_Pant.jpeg} shows the screenshot of shirt and pant details page
+\begin{figure}[h!]
+ \centering
+ \includegraphics[width=0.75\textwidth]{Shirt_and_Pant.jpeg}
+ \caption{Shirt and Pant Details Page}
+ \label{fig:Shirt_and_Pant.jpeg}
+\end{figure}
+\\
 \chapter{Conclusion and Future Scope}
 
 \textbf{Conclusion} 
+\begin{spacing}{1.5}
 \begin{itemize}
- \item {you can use bullet option to write the conclusion}
- \item {The text in the entries should be minimum 100 words }.
+ \item {In conclusion, the Tailor's Database Management System (DBMS) project offers numerous benefits for tailor shops by streamlining operations, improving customer service, and providing valuable insights for business growth. By effectively managing customer information, orders, inventory, and financial data, the DBMS enhances efficiency, accuracy, and customer satisfaction.}
+ \item {The project's successful implementation involves careful planning, database design, user-friendly interfaces, and robust security measures. Regular maintenance and support are essential to ensure the system's continued effectiveness.}
 \end{itemize}
 \textbf{Future Scope} 
 \begin{itemize}
- \item {you can use bullet option to write the Future Scope}
- \item {The text in the entries should be minimum 100 words }.
+ \item {\textbf{Integration with E-commerce}: As online shopping and custom clothing services become more popular, integrating the DBMS with an e-commerce platform can expand the tailor shop's reach and customer base.}
+
+\item{\textbf{Mobile Application}: Develop a mobile app for customers to schedule appointments, track orders, and communicate with the tailor shop conveniently.}
+
+\item{\textbf{Machine Learning and AI}: Implement AI-driven features for trend analysis, size recommendations, and personalized style suggestions based on customer data.}
+
+\item{\textbf{Multi-location Support}: If the tailor shop expands to multiple locations, the DBMS can be extended to support centralized management of all branches.}
+
+\item{\textbf{Customer Feedback and Reviews}: Include features for customers to provide feedback and reviews, helping the tailor shop improve its services and reputation.}.
 \end{itemize}
+\end{spacing}
 
 \begin{thebibliography}{7}
 \addcontentsline{toc}{chapter}{References}
