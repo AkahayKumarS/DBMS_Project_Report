@@ -208,24 +208,42 @@ The report offers insights into database design, web development, user interface
 \begin{spacing}{1.5}
 To create a database that can store client’s data like client name, phone number, address, and all the measurements so that the tailor can use the data in the database without having to measure again and again.
 \end{spacing}
+
 %\subsection{vvv}
 \section{Scope and Importance}
 \subsection{Scope:}
+The scope of the Tailor's Database for client measurement storage is extensive and encompasses various aspects of the tailoring industry and client-tailor relationships. 
+\pagenumbering{arabic}
+Key areas within the scope of this topic include:
 \begin{spacing}{1.5}
 \begin{itemize}
-\item \textbf{Customer Management}: A tailor's DBMS can store and organize customer information, including measurements, preferences, contact details, and purchase history. This data can be used to offer personalized services and promotions.
-\item \textbf{Order Processing}: The system can streamline the order management process, from taking measurements and fabric selection to tracking the progress of each order. This reduces errors and ensures timely deliveries.
-\pagenumbering{arabic}
-\item\textbf{Inventory Control}: Manage fabric and material inventory, ensuring availability and tracking usage for each order.
-\item\textbf{Measurement Records}: Store and update customer measurements accurately, making it easy to retrieve and apply them to new orders.
-\\
-\\
+\item\textbf{Measurement Accuracy:} Ensuring precise and accurate measurements to create perfectly fitting garments.
+
+\item\textbf{Client Convenience:} Streamlining the measurement recording process for clients, enhancing their overall experience.
+
+\item\textbf{Data Security:} Implementing robust security measures to protect clients' sensitive measurement data.
+
+\item\textbf{Communication:} Facilitating seamless communication between tailors and clients, regardless of geographical distances.
+
+\item\textbf{Analytics and Business Insights:} Utilizing measurement data for trend analysis, inventory management, and business growth.
+
+\item\textbf{Tailor Collaboration:} Encouraging collaboration among tailors, enabling them to consult and support each other in the tailoring process.
+
+\end{itemize}
+
 \subsection{Importance:}
-\item\textbf{Efficiency}: A DBMS streamlines operations by automating routine tasks, reducing manual errors, and improving the overall efficiency of the tailor shop.
-\item\textbf{Customer Service}: The system enables tailors to provide personalized and consistent customer service by storing customer preferences and order histories.
-\item\textbf{Accuracy}: Accurate measurement records and order tracking reduce the likelihood of errors in garment production, ensuring customer satisfaction.
-\item \textbf{Data Security}: A DBMS can provide data security features to protect sensitive customer information, ensuring that it's not compromised.
-\item \textbf{Competitive Advantage}: Implementing a modern DBMS can give tailors a competitive edge in the fashion industry by offering better services, faster delivery, and a more personalized customer experience.
+The Tailor's Database holds significant importance in the tailoring industry for several reasons:
+\begin{itemize}
+\item\textbf{Enhanced Accuracy:} Accurate measurements are fundamental to creating well-fitting garments, reducing the need for multiple fittings and alterations, thus saving time and resources.
+
+\item\textbf{Client Satisfaction:} Offering a convenient and personalized experience builds client loyalty, leading to repeat business and positive word-of-mouth referrals.
+
+\item\textbf{Data Security: }Safeguarding client measurements instills trust, ensuring clients feel comfortable sharing their personal information.
+
+\item\textbf{Efficiency:} Streamlining measurement management reduces administrative tasks, enabling tailors to focus more on their craft.
+
+\item\textbf{Business Growth:} Leveraging measurement data for analytics and insights can help tailors make informed business decisions and stay competitive in the market.
+
 \end{itemize}
 \end{spacing}
 \chapter{Software Requirement Specification}
@@ -233,12 +251,10 @@ To create a database that can store client’s data like client name, phone numb
 \section{Functional Requirement Specification} 
 Functional  Requirement Specification
 \begin{itemize}
-\item Details of operations conducted in every screen
-\item Data handling logic should be entered into the system
-\item It should have descriptions of system reports or other outputs
-\item Complete information about the workflows performed by the system
-\item It should clearly define who will be allowed to create/modify/delete the data in the system
-\item How the system will fulfill applicable regulatory and compliance needs should be captured in the functional document.
+\item The first page that appears while entering the website is the welcome page which consists of 3 buttons namely: Sign Up, Sign In and Tailor Login
+\item If you are a new user, you have to first register yourself by clicking on the Sign Up button.
+\item After filling all the fields correctly your details will be stored in the database and you will be directed to the sign in page. 
+\item After entering correct credentials in sign in page, you will be redirected to home page where you can place order for shirt or pant and can also view your profile details and measurements and can edit your measurements.
 \end{itemize}
 \section{Software Requirement Specification}
 Software Requirement Specification
@@ -261,16 +277,16 @@ Software Requirement Specification
 \end{itemize}
 \chapter{System Design}
 \section{ER Diagram} 
-Figure:\ref{fig:tailor_database.drawio.png} shows the ER diagram of Tailor's Database.
+Figure:\ref{fig:tailor_database.jpg} shows the ER diagram of Tailor's Database.
 \\
 \\
 \\
 \\
 \begin{figure}[h]
  \centering
- \includegraphics[width=1\textwidth]{tailor_database.drawio.png}
+ \includegraphics[width=1\textwidth]{tailor_database.jpg}
  \caption{ER diagram}
- \label{fig:tailor_database.drawio.png}
+ \label{fig:tailor_database.jpg}
 \end{figure}
 \\
 \\
@@ -281,15 +297,15 @@ Figure:\ref{fig:tailor_database.drawio.png} shows the ER diagram of Tailor's Dat
 \\
 \\
 \section{Schema Diagram} 
-Figure:\ref{fig:tailor_schema.jpg} shows the Schema Diagram of Tailor's Database.
+Figure:\ref{fig:tailor_schema(1).jpg} shows the Schema Diagram of Tailor's Database.
 \\
 \\
 \\
 \begin{figure}[h]
  \centering
- \includegraphics[width=1\textwidth]{tailor_schema.jpg}
+ \includegraphics[width=1\textwidth]{tailor_schema (1).jpg}
  \caption{Schema diagram}
- \label{fig:tailor_schema.jpg}
+ \label{fig:tailor_schema(1).jpg}
 \end{figure}
 \section{Table description} 
 \begin{center}
@@ -478,11 +494,17 @@ Figure:\ref{fig:Shirt_and_Pant.jpeg} shows the screenshot of shirt and pant deta
 \begin{thebibliography}{7}
 \addcontentsline{toc}{chapter}{References}
 \bibitem{texbook}
-Donald E. Knuth (1986) \emph{The \TeX{} Book}, Addison-Wesley Professional.
+Adebola Omopariola (May 2023)\emph{ Design and Implementation of a Tailoring Management System (Virlor)}, Veritas University Abuja.
 
-\bibitem{lamport94}
-Leslie Lamport (1994) \emph{\LaTeX: a document preparation system}, Addison
-Wesley, Massachusetts, 2nd ed.
+\bibitem{textbook}
+ Jagdish Chandra Patni, Hitesh Kumar Sharma, Ravi Tomar, Avita Katal (January 27, 2022) \emph{Database Management System
+An Evolutionary Approach}, CRC Press,1st Edition
+
+\bibitem{texbook}
+Marko Rosenmuller, Sven Apel (December 2009)\emph{ Tailor-made data management for embedded systems}, Data and Knowledge Engineering, Volume 68, 2009.
+
+\bibitem{texbook}
+ Raghu Ramakrishnan, Johannes Gehrke(14 August 2002)\emph{ Database Management Systems}, McGraw-Hill, Inc., Professional Book Group 11 West 19th Street New York, NY, United States
 \end{thebibliography}
 
 
