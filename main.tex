@@ -133,13 +133,7 @@ Affiliated to VTU, Belagavi\\
 }
 
 \end{center}
-\begin{center}
-  
-\large\textbf{ \\EXTERNAL VIVA}
-\end{center}
-\justifying{ 
-\large\textbf{
-NAME OF THE EXAMINER  \hspace{4 cm}  SIGNATURE \\\\ 1.\\\\2.}}
+
 
 \thispagestyle{empty}
 \newpage
@@ -249,12 +243,29 @@ The Tailor's Database holds significant importance in the tailoring industry for
 \chapter{Software Requirement Specification}
 
 \section{Functional Requirement Specification} 
-Functional  Requirement Specification
 \begin{itemize}
+\begin{spacing}{1.5}
 \item The first page that appears while entering the website is the welcome page which consists of 3 buttons namely: Sign Up, Sign In and Tailor Login
 \item If you are a new user, you have to first register yourself by clicking on the Sign Up button.
 \item After filling all the fields correctly your details will be stored in the database and you will be directed to the sign in page. 
 \item After entering correct credentials in sign in page, you will be redirected to home page where you can place order for shirt or pant and can also view your profile details and measurements and can edit your measurements.
+
+\item The admin has access to all the user data.The users will have access to their own data only. 
+\item The measurements and all the details that they enter cannot be accessed by other users.
+\item The github repository of the codes of our project: \\https://github.com/AbhikSalian/tailor-database
+\\
+\\
+\textbf{Data handling logic:}
+\\
+The data handling logic of an online tailors' database and e-commerce project involves managing various types of data, including user profiles, measurements, product information, and order details. Here is a breakdown of the key data handling components and their logic:
+
+\item\textbf{User Registration:} When a user registers, their information (name, email, password) is securely stored in the user database.
+\item\textbf{Login:} Users can log in by providing their credentials, which are verified against the stored data.
+\item\textbf{User Profiles:} Each user has a profile where they can store and manage their measurements and order history.
+\item\textbf{Measurement Input:} Users can input and save their body measurements in their profiles.
+\item\textbf{Data Validation: }The system validates measurement data to ensure it meets required criteria (e.g., valid measurements).
+\item\textbf{Measurement Updates:} Users can update or edit their measurements as needed.
+\end{spacing}
 \end{itemize}
 \section{Software Requirement Specification}
 Software Requirement Specification
@@ -487,13 +498,14 @@ Figure:\ref{fig:Shirt_and_Pant.jpeg} shows the screenshot of shirt and pant deta
 
 \item{\textbf{Multi-location Support}: If the tailor shop expands to multiple locations, the DBMS can be extended to support centralized management of all branches.}
 
-\item{\textbf{Customer Feedback and Reviews}: Include features for customers to provide feedback and reviews, helping the tailor shop improve its services and reputation.}.
+\item{\textbf{Customer Feedback and Reviews}: Include features for customers to provide feedback and reviews, helping the tailor shop improve its services and reputation.}
 \end{itemize}
 \end{spacing}
 
 \begin{thebibliography}{7}
 \addcontentsline{toc}{chapter}{References}
-\bibitem{texbook}
+\begin{spacing}{1.5}
+    \bibitem{texbook}
 Adebola Omopariola (May 2023)\emph{ Design and Implementation of a Tailoring Management System (Virlor)}, Veritas University Abuja.
 
 \bibitem{textbook}
@@ -505,6 +517,7 @@ Marko Rosenmuller, Sven Apel (December 2009)\emph{ Tailor-made data management f
 
 \bibitem{texbook}
  Raghu Ramakrishnan, Johannes Gehrke(14 August 2002)\emph{ Database Management Systems}, McGraw-Hill, Inc., Professional Book Group 11 West 19th Street New York, NY, United States
+\end{spacing}
 \end{thebibliography}
 
 
